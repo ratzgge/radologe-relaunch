@@ -333,17 +333,120 @@ section {
 }
 
 /* FOOTER */
-footer {
-    background: #111111;
+.footer {
+    background: #111;
     color: #d2d8cf;
-    padding: 28px 0;
+    padding: 40px 0 24px;
     border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-footer p {
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    font-size: 0.9rem;
+    color: #cfd8cc;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--accent);
+}
+
+.footer-brand {
+    text-align: right;
+}
+
+.footer-title {
+    font-weight: 600;
     margin: 0;
+    color: #ffffff;
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    color: #aab3a6;
+    margin: 4px 0 0;
+}
+
+.footer-bottom {
     text-align: center;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    color: #8e978c;
+}
+
+.footer-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.footer-divider {
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.footer-logo-block {
+    text-align: center;
+    max-width: 320px;
+}
+
+.footer-logo {
+    width: 60px;
+    height: auto;
+    margin: 0 auto 14px;
+}
+
+.footer-slogan-title {
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #cfd8cc;
+    margin: 0 0 8px;
+}
+
+.footer-slogan-sub {
+    font-size: 0.9rem;
+    color: #9aa39a;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .footer-center {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-divider {
+        width: 60%;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-brand {
+        text-align: left;
+    }
 }
 
 /* RESPONSIVE */
@@ -686,4 +789,111 @@ footer p {
 
 .section-header .btn {
     margin-top: 24px;
+}
+
+/* =========================
+   Impressum / Rechtliches
+========================= */
+
+.page-hero {
+    padding: 90px 0 50px;
+    background: #f7f7f7;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #777;
+}
+
+.page-hero h1 {
+    margin: 0 0 16px;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.1;
+}
+
+.page-intro {
+    max-width: 700px;
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+.legal-page {
+    padding: 60px 0 100px;
+}
+
+.legal-layout {
+    max-width: 900px;
+}
+
+.legal-card {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.legal-section + .legal-section {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #ececec;
+}
+
+.legal-section h2 {
+    margin: 0 0 16px;
+    font-size: 1.35rem;
+    line-height: 1.3;
+}
+
+.legal-section p {
+    margin: 0 0 16px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.legal-section a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.legal-section a:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 70px 0 40px;
+    }
+
+    .legal-page {
+        padding: 40px 0 70px;
+    }
+
+    .legal-card {
+        padding: 24px;
+        border-radius: 16px;
+    }
+
+    .legal-section + .legal-section {
+        margin-top: 28px;
+        padding-top: 28px;
+    }
+
+    .legal-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .legal-section p {
+        font-size: 0.98rem;
+        line-height: 1.7;
+    }
 }
