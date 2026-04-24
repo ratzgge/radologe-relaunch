@@ -943,8 +943,8 @@ section {
 
 .fade-in {
     opacity: 0;
-    transform: translateY(14px);
-    transition: opacity 0.35s ease, transform 0.35s ease;
+    transform: translateY(24px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
 }
 
 .fade-in.visible {
