@@ -1,5 +1,5 @@
 const elements = document.querySelectorAll(
-    '.service-box, .service-item, .info-item, .cta-box'
+    '.section-header, .service-box, .service-item, .info-item, .cta-box, .bike-item, .target-statement, .about-preview p'
 );
 
 elements.forEach(el => {
@@ -15,7 +15,7 @@ const observer = new IntersectionObserver((entries, observer) => {
     });
 }, {
     threshold: 0,
-    rootMargin: '0px 0px 350px 0px'
+    rootMargin: '0px 0px 400px 0px'
 });
 
 elements.forEach(el => observer.observe(el));
