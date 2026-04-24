@@ -1050,3 +1050,36 @@ section {
         padding: 28px 0;
     }
 }
+
+@media (max-width: 768px) {
+    section {
+        padding: 52px 0;
+    }
+
+    .hero {
+        padding: 72px 0 64px;
+    }
+
+    .info-band {
+        padding: 20px 0;
+    }
+
+    .section-header {
+        margin-bottom: 26px;
+    }
+
+    .brands,
+    .team,
+    .press,
+    .brand-models {
+        padding: 52px 0;
+    }
+
+    .target-layout {
+        gap: 28px;
+    }
+
+    .target-statement {
+        padding: 24px 0;
+    }
+}
