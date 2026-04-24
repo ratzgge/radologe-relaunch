@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }, {
-        threshold: 0.15,
-        rootMargin: '0px'
+        threshold: 0.05,
+        rootMargin: '0px 0px 80px 0px'
     });
 
     elements.forEach(el => observer.observe(el));
