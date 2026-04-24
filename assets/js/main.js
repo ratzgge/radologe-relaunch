@@ -1,8 +1,10 @@
 const elements = document.querySelectorAll(
-    '.section-header, .service-item, .info-item, .target-statement, .bike-item'
+    '.service-box, .service-item, .info-item, .cta-box'
 );
 
-elements.forEach(el => el.classList.add('fade-in'));
+elements.forEach(el => {
+    el.classList.add('fade-in');
+});
 
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -12,8 +14,8 @@ const observer = new IntersectionObserver((entries, observer) => {
         }
     });
 }, {
-    threshold: 0.05,
-    rootMargin: '0px 0px -80px 0px'
+    threshold: 0,
+    rootMargin: '0px 0px 350px 0px'
 });
 
 elements.forEach(el => observer.observe(el));
