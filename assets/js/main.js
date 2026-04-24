@@ -15,7 +15,7 @@ const observer = new IntersectionObserver((entries, observer) => {
     });
 }, {
     threshold: 0,
-    rootMargin: '0px 0px 400px 0px'
+    rootMargin: '0px 0px 120px 0px'
 });
 
 elements.forEach(el => observer.observe(el));
