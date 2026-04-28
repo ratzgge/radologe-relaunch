@@ -21,3 +21,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     elements.forEach(el => observer.observe(el));
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const banner = document.getElementById("cookie-banner");
+    const button = document.getElementById("cookie-accept");
+
+    if (!localStorage.getItem("cookieAccepted")) {
+        banner.classList.remove("hidden");
+    }
+
+    if (button) {
+        button.addEventListener("click", () => {
+            localStorage.setItem("cookieAccepted", "true");
+            banner.classList.add("hidden");
+        });
+    }
+});
