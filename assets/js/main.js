@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
+    /*
+      Scroll Animation
+    */
     const elements = document.querySelectorAll(
-        '.section-header, .service-box, .service-item, .info-item, .cta-box, .bike-item, .target-statement'
+        '.section-header, .service-box, .service-item, .info-item, .cta-box, .bike-item, .target-statement, .brand-showcase-card'
     );
 
     elements.forEach(el => {
@@ -20,17 +23,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     elements.forEach(el => observer.observe(el));
-});
 
-document.addEventListener("DOMContentLoaded", () => {
+
+    /*
+      Cookie Banner
+    */
     const banner = document.getElementById("cookie-banner");
     const button = document.getElementById("cookie-accept");
 
-    if (!localStorage.getItem("cookieAccepted")) {
-        banner.classList.remove("hidden");
-    }
+    if (banner && button) {
+        if (!localStorage.getItem("cookieAccepted")) {
+            banner.classList.remove("hidden");
+        }
 
-    if (button) {
         button.addEventListener("click", () => {
             localStorage.setItem("cookieAccepted", "true");
             banner.classList.add("hidden");
