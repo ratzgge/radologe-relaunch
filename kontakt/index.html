@@ -62,35 +62,48 @@
             </div>
 
             <div class="service-grid">
-                <article class="service-box">
+
+                <!-- Adresse -->
+                <a href="https://www.google.com/maps/search/?api=1&query=Riederstraße+8+70619+Stuttgart"
+                   target="_blank"
+                   rel="noopener"
+                   class="service-box service-link">
                     <h3>Adresse</h3>
                     <p>
                         Riederstraße 8<br>
                         70619 Stuttgart
                     </p>
-                </article>
+                </a>
 
-                <article class="service-box">
+                <!-- Telefon -->
+                <a href="tel:+49711427289" class="service-box service-link">
                     <h3>Telefon</h3>
-                    <p>
-                        <a href="tel:+49711427289">0711 427289</a>
-                    </p>
-                </article>
+                    <p>0711 427289</p>
+                </a>
 
-                <article class="service-box">
+                <!-- E-Mail -->
+                <a href="mailto:info@radologe.de" class="service-box service-link">
                     <h3>E-Mail</h3>
-                    <p>
-                        <a href="mailto:info@radologe.de">info@radologe.de</a>
-                    </p>
-                </article>
+                    <p>info@radologe.de</p>
+                </a>
 
-                <article class="service-box">
-                    <h3>Öffnungszeiten</h3>
+                <!-- Öffnungszeiten -->
+                <article class="service-box opening-box">
+                    <h3 class="opening-title">
+                        Öffnungszeiten
+                        <span class="status-dot"></span>
+                    </h3>
+
                     <p>
                         Mo–Fr 16:00–19:00<br>
                         Sa 9:00–12:00
                     </p>
+
+                    <p id="opening-status" class="opening-status">
+                        Öffnungszeiten werden geprüft...
+                    </p>
                 </article>
+
             </div>
         </div>
     </section>

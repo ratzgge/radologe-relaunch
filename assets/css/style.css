@@ -1205,3 +1205,98 @@ section {
 .brand-models-light {
     background: var(--bg);
 }
+
+.consulting {
+    background: var(--surface-alt);
+}
+
+.consulting-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.consulting-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    object-fit: cover;
+}
+
+.consulting-content .content-text {
+    margin-bottom: 30px;
+    color: var(--muted);
+}
+
+@media (max-width: 900px) {
+    .consulting-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+.service-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.opening-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-dot {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background: gray;
+    display: inline-block;
+}
+
+.status-dot.open {
+    background: #2ecc71;
+}
+
+.status-dot.closed {
+    background: #e74c3c;
+}
+
+.opening-status {
+    margin-top: 10px;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.opening-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-dot {
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+    background: gray;
+    display: inline-block;
+}
+
+.status-dot.open {
+    background: #2ecc71;
+}
+
+.status-dot.closed {
+    background: #e74c3c;
+}
+
+.opening-status-small {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 4px;
+    color: #d7e3d3;
+}

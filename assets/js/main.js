@@ -42,3 +42,83 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+const openingStatus = document.getElementById("opening-status");
+
+if (openingStatus) {
+    const dot = document.querySelector(".status-dot");
+
+    const now = new Date();
+    const day = now.getDay();
+    const minutesNow = now.getHours() * 60 + now.getMinutes();
+
+    const openingHours = {
+        1: { open: 16 * 60, close: 19 * 60 },
+        2: { open: 16 * 60, close: 19 * 60 },
+        3: { open: 16 * 60, close: 19 * 60 },
+        4: { open: 16 * 60, close: 19 * 60 },
+        5: { open: 16 * 60, close: 19 * 60 },
+        6: { open: 9 * 60, close: 12 * 60 }
+    };
+
+    const today = openingHours[day];
+
+    if (today && minutesNow >= today.open && minutesNow < today.close) {
+        const closeHour = String(Math.floor(today.close / 60)).padStart(2, "0");
+        const closeMinute = String(today.close % 60).padStart(2, "0");
+
+        dot.classList.add("open");
+        openingStatus.textContent = `Aktuell geöffnet · bis ${closeHour}:${closeMinute} Uhr`;
+
+    } else if (today && minutesNow < today.open) {
+        const openHour = String(Math.floor(today.open / 60)).padStart(2, "0");
+        const openMinute = String(today.open % 60).padStart(2, "0");
+
+        dot.classList.add("closed");
+        openingStatus.textContent = `Aktuell geschlossen · öffnet heute um ${openHour}:${openMinute} Uhr`;
+
+    } else {
+        dot.classList.add("closed");
+        openingStatus.textContent = "Aktuell geschlossen";
+    }
+}
+
+const smallStatus = document.getElementById("opening-status-small");
+
+if (smallStatus) {
+    const dot = document.querySelector(".status-dot");
+
+    const now = new Date();
+    const day = now.getDay();
+    const minutesNow = now.getHours() * 60 + now.getMinutes();
+
+    const openingHours = {
+        1: { open: 16 * 60, close: 19 * 60 },
+        2: { open: 16 * 60, close: 19 * 60 },
+        3: { open: 16 * 60, close: 19 * 60 },
+        4: { open: 16 * 60, close: 19 * 60 },
+        5: { open: 16 * 60, close: 19 * 60 },
+        6: { open: 9 * 60, close: 12 * 60 }
+    };
+
+    const today = openingHours[day];
+
+    if (today && minutesNow >= today.open && minutesNow < today.close) {
+        const closeHour = String(Math.floor(today.close / 60)).padStart(2, "0");
+        const closeMinute = String(today.close % 60).padStart(2, "0");
+
+        dot.classList.add("open");
+        smallStatus.textContent = `Geöffnet · bis ${closeHour}:${closeMinute}`;
+
+    } else if (today && minutesNow < today.open) {
+        const openHour = String(Math.floor(today.open / 60)).padStart(2, "0");
+        const openMinute = String(today.open % 60).padStart(2, "0");
+
+        dot.classList.add("closed");
+        smallStatus.textContent = `Geschlossen · geöffnet ab ${openHour}:${openMinute}`;
+
+    } else {
+        dot.classList.add("closed");
+        smallStatus.textContent = "Geschlossen";
+    }
+}
