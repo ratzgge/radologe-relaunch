@@ -5,6 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Radologe – Fahrradwerkstatt Stuttgart</title>
   <meta name="description" content="Fahrradwerkstatt in Stuttgart mit individueller Beratung für Rennrad, Mountainbike und Alltagsrad. Service, Reparatur und persönliche Betreuung bei Radologe.">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BicycleStore",
+      "name": "Radologe",
+      "description": "Fahrradwerkstatt und Radsport-Fachgeschäft in Stuttgart mit Beratung, Verkauf, Wartung und Reparatur für Fahrräder und E-Bikes.",
+      "url": "https://ratzgge.github.io/radologe-relaunch/",
+      "logo": "https://ratzgge.github.io/radologe-relaunch/assets/images/logo.png",
+      "image": "https://ratzgge.github.io/radologe-relaunch/assets/images/logo.png",
+      "telephone": "+49 711 427289",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Riederstraße 8",
+        "postalCode": "70619",
+        "addressLocality": "Stuttgart",
+        "addressCountry": "DE"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "16:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "12:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.centurion.de/de-de/group/bike-kategorien-18",
+        "https://www.merida-bikes.com/de-de",
+        "https://bassobikes.com/de/fahrrader"
+      ]
+    }
+  </script>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +71,7 @@
       <a href="./" class="active">Start</a>
       <a href="leistungen/">Leistungen</a>
       <a href="ebike/index.html">E-Bike</a>
-      <a href="../fahrraeder/index.html">Fahrräder</a>
+      <a href="fahrraeder/index.html">Fahrräder</a>
       <a href="ueber-uns/index.html">Über uns</a>
       <a href="kontakt/">Kontakt</a>
     </nav>
@@ -198,8 +242,8 @@
     <div class="footer-top">
       <nav class="footer-nav">
         <a href="kontakt/index.html">Kontakt</a>
-        <a href="../impressum/index.html">Impressum</a>
-        <a href="../datenschutz/index.html">Datenschutz</a>
+        <a href="impressum/index.html">Impressum</a>
+        <a href="datenschutz/index.html">Datenschutz</a>
       </nav>
 
       <div class="footer-brand">
@@ -232,6 +276,11 @@
 
   </div>
 </footer>
+
+<!-- SCROLL TO TOP BUTTON -->
+<button id="scroll-top-btn" class="scroll-top-btn" aria-label="Nach oben scrollen">
+  ↑
+</button>
 
 <div id="cookie-banner" class="cookie-banner hidden">
   <p>
